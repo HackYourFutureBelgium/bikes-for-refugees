@@ -54,6 +54,7 @@ p {
 }
 
 .header__logo {
+  display: block;
   max-height: 90px;
   width: auto;
 }
@@ -67,6 +68,11 @@ p {
 
 .navigation__item {
   padding: 0.5rem 0;
+  margin-left: 20px;
+}
+
+.navigation__item:first-child {
+  margin-left: 0; 
 }
 
 .navigation__link {
@@ -75,7 +81,55 @@ p {
   text-transform: uppercase;
   text-decoration: none;
 }
+.navigation__link:hover {
+  color: orange;
+}
 
+.btn {
+  background-color: #92270d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  color:#92270d ;
+  background-color: white;
+}
+
+/* Farklı boyut veya tip için ekstra class */
+.btn-outline {
+  background-color: white;
+  color: #FF7A59;
+  border: 2px solid #FF7A59;
+}
+
+.btn1 {
+  background-color:white ;
+  color: #92270d;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn1:hover {
+  color: white;
+  background-color:#92270d;
+}
+
+/* Farklı boyut veya tip için ekstra class */
+.btn1-outline {
+  background-color: white;
+  color: #FF7A59;
+  border: 2px solid #FF7A59;
+}
 
 /* Text styles */
 
@@ -92,11 +146,9 @@ p {
   border-left-color: var(--orange-dark);
 }
 
-
 /* Buttons */
 
   /* INSERT BUTTON STYLES HERE */
-
 
 /* Content */
 
@@ -120,9 +172,12 @@ p {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
   background-color: var(--grey-light);
-}
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+ }
 
 .hero h1 {
   margin-bottom: 1rem;
@@ -133,7 +188,6 @@ p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-
 
 /* Headings */
 
@@ -158,11 +212,18 @@ p {
   background: var(--orange-dark);
 }
 
-
 /* Article */
 
 .article {
   margin-bottom: 1rem;
+   border: 1px solid #ccc;
+  border-radius: 8px;  /* yuvarlak köşeler */
+  padding: 15px;
+}
+
+.articles_container{
+  display: flex;
+  gap: 20px;
 }
 
 .article__title {
@@ -248,3 +309,5 @@ p {
     padding-right: 2rem;
   }
 }
+
+
