@@ -60,9 +60,11 @@ p {
 
 /* Navigation */
 
+
 .navigation__list {
   display: flex;
-  list-style: none;
+  gap: 2rem; /*   Define separation */
+  /*list-style: none;  */
 }
 
 .navigation__item {
@@ -96,7 +98,23 @@ p {
 /* Buttons */
 
   /* INSERT BUTTON STYLES HERE */
+button {
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
 
+.hero button:first-of-type,
+.header button {
+  background: var(--orange-dark);
+  color: var(--white);
+}
+
+.hero button:last-of-type {
+  background: var(--white);
+  color: var(--orange-dark);
+}
 
 /* Content */
 
@@ -120,8 +138,14 @@ p {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
+  background-image: url("../images/header-bike.jpg");
   background-color: var(--grey-light);
+  
+  /* Changes added  */  
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: var(--white);
 }
 
 .hero h1 {
@@ -219,6 +243,15 @@ p {
   min-width: 350px;
 }
 
+/* sidebar improvement */
+.sidebar .article {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid var(--grey-light);
+  padding: 1rem;
+  border-radius: 4px;
+}
 /* Footer */
 
 .footer {
