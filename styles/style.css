@@ -138,7 +138,7 @@ button {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
+  background-image: url("../images/header-bike.jpg");
   background-color: var(--grey-light);
   
   /* Changes added  */  
