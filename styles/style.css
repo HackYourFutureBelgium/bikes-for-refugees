@@ -241,6 +241,15 @@ button {
   min-width: 350px;
 }
 
+/* sidebar improvement */
+.sidebar .article {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid var(--grey-light);
+  padding: 1rem;
+  border-radius: 4px;
+}
 /* Footer */
 
 .footer {
