@@ -109,6 +109,11 @@ button {
   color: var(--white);
 }
 
+.hero button:last-of-type {
+  background: var(--white);
+  color: var(--orange-dark);
+}
+
 /* Content */
 
 .content {
