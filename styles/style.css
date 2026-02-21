@@ -4,14 +4,13 @@
  * Lesson: 1
  * 
  */
-
- :root {
-   --grey-dark: #292b2c;
-   --grey-light: #e4e4e4;
-   --orange-dark: #c05326;
-   --orange-light: #f7eae4;
-   --white: #fff;
- }
+:root {
+  --grey-dark: #292b2c;
+  --grey-light: #e4e4e4;
+  --orange-dark: #c05326;
+  --orange-light: #f7eae4;
+  --white: #fff;
+}
 
 body {
   margin: 0;
@@ -24,7 +23,12 @@ button {
   font-size: 1rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -43,7 +47,6 @@ p {
 }
 
 /* Header */
-
 .header {
   display: flex;
   align-items: center;
@@ -59,14 +62,14 @@ p {
 }
 
 /* Navigation */
-
 .navigation__list {
   display: flex;
   list-style: none;
 }
 
 .navigation__item {
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  /* ← تم التغيير: أضفنا 1rem أفقياً */
 }
 
 .navigation__link {
@@ -76,9 +79,7 @@ p {
   text-decoration: none;
 }
 
-
 /* Text styles */
-
 .text-highlight {
   color: var(--orange-dark);
   font-weight: 600;
@@ -92,21 +93,23 @@ p {
   border-left-color: var(--orange-dark);
 }
 
-
 /* Buttons */
-
-  /* INSERT BUTTON STYLES HERE */
-
+button {
+  background-color: var(--orange-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
 
 /* Content */
-
 .content {
   display: flex;
   flex-direction: column;
 }
 
 /* Alert */
-
 .alert {
   background-color: var(--orange-light);
   border-left: 4px solid var(--orange-dark);
@@ -118,10 +121,13 @@ p {
 }
 
 /* hero */
-
 .hero {
   background-image: url("header-bike.jpg");
   background-color: var(--grey-light);
+  padding: 4rem 2rem;
+  /* ← تم التغيير: أضفنا مسافة داخل الـ hero */
+  margin-bottom: 2rem;
+  /* ← تم التغيير: أضفنا مسافة تحت الـ hero */
 }
 
 .hero h1 {
@@ -134,9 +140,7 @@ p {
   margin-bottom: 2rem;
 }
 
-
 /* Headings */
-
 .heading-underline {
   position: relative;
   margin-bottom: 2rem;
@@ -158,9 +162,12 @@ p {
   background: var(--orange-dark);
 }
 
+.main>div>div {
+  display: flex;
+  gap: 2rem;
+}
 
 /* Article */
-
 .article {
   margin-bottom: 1rem;
 }
@@ -212,7 +219,6 @@ p {
 }
 
 /* Sidebar */
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -220,7 +226,6 @@ p {
 }
 
 /* Footer */
-
 .footer {
   margin-top: 2rem;
 }
@@ -238,7 +243,6 @@ p {
 }
 
 /* Media queries */
-
 @media screen and (min-width: 992px) {
   .content {
     flex-direction: row;
