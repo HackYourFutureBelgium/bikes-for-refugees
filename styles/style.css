@@ -34,9 +34,10 @@ p {
   margin-bottom: 0;
 }
 
-.header,
-.content,
-.footer {
+header,
+main, /* Wrote content but your HTML has <main class="content">, 
+         not a <content> element */
+footer {
   padding: 0 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -44,7 +45,7 @@ p {
 
 /* Header */
 
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,28 +61,33 @@ p {
 
 /* Navigation */
 
-.navigation__list {
+.navigation-list {
   display: flex;
   list-style: none;
 }
 
-.navigation__item {
-  padding: 0.5rem 0;
+.navigation-item {
+  padding: 0.5rem 1.5rem; /* Add spacing to Left/right padding */
 }
 
-.navigation__link {
+.navigation-link:hover, /* Add navigation hover effect --orange-dark */
+.navigation-link:focus {
+  color: var(--orange-dark);
+  transform: translateY(-3px);
+}
+
+.navigation-link {
   color: var(--grey-dark);
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-
 /* Text styles */
 
 .text-highlight {
-  color: var(--orange-dark);
-  font-weight: 600;
+  color: var(--grey-dark); /* fix accessability contrast for Lighthouse */
+  font-weight: 700;
 }
 
 .arrow-right {
@@ -92,15 +98,43 @@ p {
   border-left-color: var(--orange-dark);
 }
 
-
 /* Buttons */
 
-  /* INSERT BUTTON STYLES HERE */
+button {
+  padding: 0.75em 1.5em;
+  border-radius: 0.2em;
+  border: 0;
+  font-weight: 700;
+  font-size: 1.2em;
+}
 
+.button-orange {
+  background-color: var(--orange-dark);
+  color: var(--white);
+  border: 1px solid var(--orange-dark);
+}
 
-/* Content */
+.button-orange:hover, /* Add first hover effect on orange buttons */
+.button-orange:focus {
+  background: var(--white);
+  color: var(--orange-dark);
+  border: 1px solid var(--orange-dark);
+}
 
-.content {
+.button-white {
+  background-color: var(--white);
+  color: var(--orange-dark);
+  border: 1px solid var(--white);
+}
+
+.button-white:hover, /* Add second hover effect on white buttons */
+.button-white:focus {
+  background: var(--orange-dark);
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+main {
   display: flex;
   flex-direction: column;
 }
@@ -120,8 +154,12 @@ p {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
+  background-image: url("../images/header-bike.jpg");
   background-color: var(--grey-light);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 9rem 1.5rem ; /* padding: Top/bottom & Left/right */
 }
 
 .hero h1 {
@@ -139,10 +177,20 @@ p {
 
 .heading-underline {
   position: relative;
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
   border-bottom: 2px solid var(--orange-light);
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increased the font size slightly */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.heading-sidebar-underline {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-top: 0rem;
+  border-bottom: 2px solid var(--orange-light);
+  font-size: 1.2rem;  /* Increased the font size slightly */
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -152,9 +200,20 @@ p {
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: 25%;
+  width: 30%;
   height: 2px;
   max-width: 100px;
+  background: var(--orange-dark);
+}
+
+.heading-sidebar-underline:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  max-width: 150px;
   background: var(--orange-dark);
 }
 
@@ -162,7 +221,15 @@ p {
 /* Article */
 
 .article {
+  border: 1px solid var(--grey-light);
+  padding: 1rem;
   margin-bottom: 1rem;
+}
+
+/* display: flex puts the two articles side by side, gap adds space between them */
+.articles-container {
+  display: flex;
+  gap: 2rem;
 }
 
 .article__title {
@@ -183,7 +250,8 @@ p {
 
 .article__thumbnail {
   object-fit: contain;
-  width: 5rem;
+  width: 7rem;
+  height: auto;
 }
 
 .article__read-more {
@@ -209,19 +277,29 @@ p {
 
 .facebook-link {
   color: var(--orange-dark);
+  text-align: end; /* Added text align to "end" got the option in dropdown menu, 
+                      looked it up and end we use mostly for multilingual site... 
+                      For flexible, direction-aware alignment .*/
 }
 
 /* Sidebar */
 
-.sidebar {
+aside {
   display: flex;
   flex-direction: column;
   min-width: 350px;
 }
 
+aside .article {   /* created a new class for our sidebar articles */
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
 /* Footer */
 
-.footer {
+footer {
   margin-top: 2rem;
 }
 
@@ -240,7 +318,7 @@ p {
 /* Media queries */
 
 @media screen and (min-width: 992px) {
-  .content {
+  main {
     flex-direction: row;
   }
 

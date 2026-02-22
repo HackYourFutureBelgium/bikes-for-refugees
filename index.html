@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <div class="header">
+    <header>
 
         <a href="#">
           <img
@@ -30,28 +30,28 @@
           />
         </a>
 
-        <div>
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Home</a>
+        <nav>
+          <ul class="navigation-list"> <!-- Refactor the class names -->
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Home</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">About Us</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">About Us</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">News & Events</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">News & Events</a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Contact Us</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Contact Us</a>
             </li>
           </ul>
-        </div>
+        </nav>
 
-        <button>Donate Now</button>
+        <button class="button-orange">Donate Now</button>
 
-    </div>
+    </header>
 
-    <div class="content">
+    <main class="content">
         <div class="main">
           <div class="alert">
             You've helped us give <span class="text-highlight">72</span> bikes
@@ -64,14 +64,14 @@
               Providing donated bikes and accessories to refugees and asylum
               seekers in Scotland.
             </p>
-            <button>Donate a bike today</button>
-            <button>Volunteer</button>
+            <button class="button-orange">Donate a bike today</button>
+            <button class="button-white">Volunteer</button>
           </div>
 
           <div>
             <h2 class="heading-underline">Learn more</h2>
 
-            <div>
+            <div class="articles-container"> <!-- giving an extra class so I can divide the article part -->
               <div class="article">
                 <h3 class="article__title">Why do refugees need bikes?</h3>
                 <p class="article__summary">
@@ -105,14 +105,14 @@
           </div>
         </div>
 
-        <div class="sidebar">
-          <h2 class="heading-underline">Upcoming events</h2>
+        <aside>
+          <h2 class="heading-sidebar-underline">Upcoming events</h2>
 
           <div class="article">
             <img
               class="article__thumbnail"
-              src="spring-fundraisers_thumbnail.jpg"
-              alt=""
+              src="images/spring-fundraisers_thumbnail.jpg"
+              alt="spring fundraisers thumbnail"
             />
             <div class="article__content">
               <h3 class="article__title">
@@ -128,8 +128,8 @@
           <div class="article">
             <img
               class="article__thumbnail"
-              src="bikes-for-refugees_logo.jpg"
-              alt=""
+              src="images/bikes-for-refugees_logo.jpg"
+              alt="bikes for refugees logo"
             />
             <div class="article__content">
               <h3 class="article__title">
@@ -141,8 +141,8 @@
           <div class="article">
             <img
               class="article__thumbnail"
-              src="edinburgh-damascus_thumbnail.png"
-              alt=""
+              src="images/edinburgh-damascus_thumbnail.png"
+              alt="edinburgh damascus bikerider thumbnail"
             />
             <div class="article__content">
               <h3 class="article__title">
@@ -163,10 +163,10 @@
             <span class="fa fa-facebook-square"></span>
             All Facebook events
           </a>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-    <div class="footer">
+    <footer>
       <div class="footer__content">
         <p>
           <strong>Bikes for Refugees Scotland is a volunteer-led project to help
@@ -174,6 +174,6 @@
         </p>
         <p>Website by Code Your Future</p>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
