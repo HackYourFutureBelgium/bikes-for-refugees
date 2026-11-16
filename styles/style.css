@@ -104,9 +104,9 @@ button {
 }
 
 .btn-outline { 
-  background: transparent; 
-  color: var(--white);
-  border: 2px solid var(--white); 
+  background: var(--white);
+  color: var(--orange-dark);
+  border: 2px solid var(--orange-dark); 
 }
 
 /* Content */
@@ -133,15 +133,18 @@ button {
 .hero {
   background-image: url("../images/header-bike.jpg");
   background-color: var(--grey-light);
+  padding: 5rem 2.5rem;
 }
 
 .hero h1 {
-  margin-bottom: 1rem;
   font-size: 2.5rem;
-}
+  color: var(--white);
+  margin-bottom: 1rem;
+  }
 
 .hero p {
   font-size: 1.2rem;
+  color: var(--white);
   margin-bottom: 2rem;
 }
 
@@ -192,11 +195,6 @@ button {
 }
 
 .article__thumbnail {
-  object-fit: contain;
-  width: 5rem;
-}
-
-.alert {
   object-fit: contain;
   width: 5rem;
 }
