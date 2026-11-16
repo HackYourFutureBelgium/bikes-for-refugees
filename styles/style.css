@@ -66,7 +66,7 @@ p {
 }
 
 .navigation__item {
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .navigation__link {
@@ -176,6 +176,8 @@ button {
 
 .article {
   margin-bottom: 1rem;
+  border: 1px solid var(--grey-light);
+  padding: 1rem;
 }
 
 .article__title {
@@ -215,6 +217,11 @@ button {
   text-decoration: underline;
 }
 
+.articles-row {
+  display: flex;
+  gap: 1rem;
+}
+
 .fa {
   margin-right: 0.5rem;
   color: var(--orange-dark);
@@ -222,6 +229,7 @@ button {
 
 .facebook-link {
   color: var(--orange-dark);
+  align-self: flex-end;
 }
 
 /* Sidebar */
@@ -230,6 +238,24 @@ button {
   display: flex;
   flex-direction: column;
   min-width: 350px;
+}
+
+/* Hovers */
+
+.navigation__link:hover {
+  color: var(--orange-dark);
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--orange-dark);
+  border: 2px solid var(--orange-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--orange-dark);
+  color: var(--white);
+  border: 2px solid var(--white);
 }
 
 /* Footer */
