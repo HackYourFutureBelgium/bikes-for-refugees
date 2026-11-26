@@ -15,6 +15,9 @@
 
 body {
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+  font-size: 16px;
 }
 
 body,
@@ -120,18 +123,20 @@ p {
 /* hero */
 
 .hero {
-  background-image: url("header-bike.jpg");
+  background-image: url("/images/header-bike.jpg");
   background-color: var(--grey-light);
 }
 
 .hero h1 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
+  color: var(--white);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: var(--white);
 }
 
 
@@ -247,4 +252,42 @@ p {
   .main {
     padding-right: 2rem;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--orange-dark);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button--primary {
+  background-color: var(--orange-dark);
+  color: var(--white);
+}
+
+.button--secondary {
+  background-color: var(--white);
+  color: var(--orange-dark);
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--orange-dark);
+}
+
+.button--secondary:hover {
+  background-color: var(--orange-dark);
+  color: var(--white);
 }
