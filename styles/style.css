@@ -275,6 +275,7 @@ p {
   text-align: right;
   margin-top: 0;
   padding-right: 0;
+  text-decoration: underline;
 }
 
 /* Sidebar */
@@ -387,7 +388,7 @@ a {
 .learn-more__article {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: stretch;
   gap: 1rem;
 }
 
@@ -395,4 +396,7 @@ a {
   border: 2px solid var(--grey-light);
   border-radius: 4px;
   padding: 1rem;
+  margin-bottom: 0;
+  box-sizing:border-box;
+  height: 100%;
 }
